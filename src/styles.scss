@@ -5,6 +5,6 @@ $background-color: #333333;
 
 
 body{
-    background-color: $background-color;
-    color: white;
+    background-color: $background-color !important; 
+    color: white !important;
 }
