@@ -5,12 +5,12 @@ import { CelularesComponent } from "./celulares/celulares.component";
 import { ProductService } from './api/product.service';
 import { CommonModule } from '@angular/common';
 import { FiltrosComponent } from "./filtros/filtros.component";
-
+import { ProductDetailComponent } from "./product-detail/product-detail.component";
 
 @Component({ 
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CelularesComponent, CommonModule, FiltrosComponent],
+  imports: [RouterOutlet, HeaderComponent, CelularesComponent, CommonModule, FiltrosComponent, ProductDetailComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

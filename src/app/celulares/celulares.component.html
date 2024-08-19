@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-3 text-white" *ngFor="let product of products">
-      <div class="movie-card" role="button">
+      <div class="movie-card" role="button" [routerLink]="['/producto', product.id]">
         <img class="card-img mt-3" src="https://www.exito.com/_next/image?url=https%3A%2F%2Fexitocol.vtexassets.com%2Farquivos%2Fids%2F23241119%2FCelular-MOTOROLA-G72-SS-128-GB-6-GB-RAM-Blanco-3567243_a.jpg%3Fv%3D638544278010100000&w=256&q=75" alt="Card image">
         <div class="card-img">
           <h5 class="card-title">{{ product.title }}</h5>

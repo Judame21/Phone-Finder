@@ -46,4 +46,9 @@ export class ProductService {
             })
         );
     }
+
+    getProductById(id: string): Observable<any> {
+        return this._http.get(`https://fakestoreapi.com/products/${id}`);
+    }
+    
 }
