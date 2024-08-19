@@ -1,0 +1,42 @@
+<div class="filter-container">
+    <h4>Filtros</h4>
+  
+    <!-- Filtro por Categoría -->
+    <div class="form-group">
+      <label for="categoria">Categoría</label>
+      <select id="categoria" class="form-control" (change)="onCategoriaChange($event)">
+        <option value="">Todas</option>
+        <option value="men's clothing">Ropa de Hombre</option>
+        <option value="women's clothing">Ropa de Mujer</option>
+        <option value="jewelery">Joyas</option>
+        <option value="electronics">Electrónica</option>
+      </select>
+    </div>
+  
+    <!-- Filtro por Rango de Precios -->
+    <div class="form-group">
+      <label for="precioMin">Precio Mínimo</label>
+      <input
+        type="number"
+        id="precioMin"
+        class="form-control"
+        (input)="onPrecioMinChange($event)"
+        placeholder="0"
+      />
+    </div>
+  
+    <div class="form-group">
+      <label for="precioMax">Precio Máximo</label>
+      <input
+        type="number"
+        id="precioMax"
+        class="form-control"
+        (input)="onPrecioMaxChange($event)"
+        placeholder="1000"
+      />
+    </div>
+  
+    <!-- Botón para Limpiar Filtros -->
+    <button class="btn btn-secondary" (click)="limpiarFiltros()">Limpiar Filtros</button>
+  </div>
+  
