@@ -1,7 +1,25 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark barra-color fixed-top ">
-    <div class="container justify-content-center">
-        <a class="navbar-brand" href="index.html"><img src="/Logo.png"  alt="Logo de PhoneFinder" style="width: 100px; height: auto"></a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark barra-color fixed-top">
+      <div class="container-fluid m-5">
+        <!-- Logotipo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="/Logo.png" alt="Logo de PhoneFinder" style="width: 100px; height: auto">
+        </a>
+  
+        <!-- Barra de búsqueda centrada -->
+        <div class="mx-auto buscador">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
+        </div>
+  
+        <!-- Botones de Iniciar Sesión y Registrarse -->
+        <div class="d-flex">
+          <a href="/login" class="btn btn-outline-light me-2">Iniciar Sesión</a>
+          <a href="/register" class="btn btn-light">Registrarse</a>
+        </div>
+      </div>
     </nav>
-</header> 
+  </header>
+  

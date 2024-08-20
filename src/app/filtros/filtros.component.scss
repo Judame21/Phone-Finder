@@ -1,0 +1,38 @@
+@import "../../styles.scss";
+
+.filter-header {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $green-color; /* Un color llamativo que combine con el resto de tu diseño */
+}
+
+.filter-container .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: $green-color;
+    box-shadow: 0 0 0 0.2rem rgba(16, 116, 21, 0.25);
+}
+
+.btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.icono-dollar{
+    height: 100%;
+}

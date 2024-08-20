@@ -2,11 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, withFetch} from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 import { CelularesComponent } from './celulares/celulares.component';   
 
-import { CelularesService } from './celulares/celulares.service';
+import { ProductService } from './api/product.service';
 
 @NgModule({
   imports: [
@@ -14,10 +13,12 @@ import { CelularesService } from './celulares/celulares.service';
     CommonModule,
     HttpClientModule,
     AppComponent,
-    CelularesComponent
+    CelularesComponent,
   ],
   providers: [
-    CelularesService
+    ProductService
   ]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

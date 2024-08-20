@@ -3,12 +3,15 @@ import { ProductService } from '../api/product.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Product } from '../api/product.model';
+import { TruncatePipe } from '../truncate.pipe';
+
+
 @Component({
   selector: 'app-celulares',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TruncatePipe],
   templateUrl: './celulares.component.html',
-  styleUrls: ['./celulares.component.scss']
+  styleUrls: ['./celulares.component.scss', '../../styles.scss']
 })
 export class CelularesComponent implements OnInit {
   products: Product[] = [];

@@ -1,0 +1,23 @@
+@import "../../styles.scss";
+
+.product-image{
+    height: 70vh;
+    width: auto;
+}
+
+.linea{
+    height: 15px;
+    width: 100%;
+    background-color: $green-color;
+}
+
+.secundaria{
+    margin-bottom: 20px;
+}
+ p {
+    font-size: large !important;
+}
+
+.texto{
+    font-size: 23px !important;
+}

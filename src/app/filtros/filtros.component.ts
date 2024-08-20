@@ -1,15 +1,24 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../api/product.service';
 
+
+import {faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
 @Component({
   selector: 'app-filtros',
   standalone: true,
   templateUrl: './filtros.component.html',
-  styleUrls: ['./filtros.component.scss']
+  styleUrls: ['./filtros.component.scss'],
+  imports: [FontAwesomeModule]
 })
 export class FiltrosComponent {
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) {
 
+  }
+  faDollarSign = faDollarSign;
+  
   onCategoriaChange(event: any) {
     const categoria = event.target.value;
     const filtrosActuales = this.productService.getFiltrosActuales();
