@@ -16,9 +16,26 @@
   
         <!-- Botones de Iniciar Sesión y Registrarse -->
         <div class="d-flex">
-          <a href="/login" class="btn btn-outline-light me-2">Iniciar Sesión</a>
-          <a href="/register" class="btn btn-light">Registrarse</a>
+          
+        <!-- SI EL USUARIO NO HA INICIADO SESION -->
+
+          <a href="/login" *ngIf="!authService.isAuthenticated()" class="btn btn-outline-light me-2">Iniciar Sesión</a>
+          <a href="/register" *ngIf="!authService.isAuthenticated()" class="btn btn-light">Registrarse</a>
+          
+          <!-- Mostrar el menú desplegable si está autenticado -->
+          
+          <div ngbDropdown  *ngIf="authService.isAuthenticated()">
+            <button ngbDropdownToggle class="btn btn-primary">{{ userName || 'User' }}</button>
+            <div ngbDropdownMenu>
+              <a href="/admin"><button ngbDropdownItem href="/admin">Administrador</button></a>
+              <button ngbDropdownItem (click)="logout()">Cerrar Sesión</button>
+            </div>
+          </div>
+          
+          
+          
         </div>
+        
       </div>
     </nav>
   </header>

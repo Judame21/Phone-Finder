@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, withFetch} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CelularesComponent } from './celulares/celulares.component';   
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductService } from './api/product.service';
 
@@ -14,6 +15,7 @@ import { ProductService } from './api/product.service';
     HttpClientModule,
     AppComponent,
     CelularesComponent,
+    NgbDropdownModule
   ],
   providers: [
     ProductService

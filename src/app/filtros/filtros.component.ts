@@ -1,10 +1,7 @@
-import { Component } from '@angular/core';
-import { ProductService } from '../api/product.service';
-
-
-import {faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { ProductService } from '../api/product.service';
 
 @Component({
   selector: 'app-filtros',
@@ -14,27 +11,24 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [FontAwesomeModule]
 })
 export class FiltrosComponent {
-  constructor(private productService: ProductService) {
-
-  }
   faDollarSign = faDollarSign;
-  
+  @Output() filtroCambio = new EventEmitter<any>();
+
+  constructor(private productService: ProductService) {}
+
   onCategoriaChange(event: any) {
     const categoria = event.target.value;
-    const filtrosActuales = this.productService.getFiltrosActuales();
-    this.productService.actualizarFiltros({ ...filtrosActuales, categoria });
+    this.productService.actualizarFiltros({ ...this.productService.getFiltrosActuales(), categoria });
   }
 
   onPrecioMinChange(event: any) {
     const precioMin = event.target.value;
-    const filtrosActuales = this.productService.getFiltrosActuales();
-    this.productService.actualizarFiltros({ ...filtrosActuales, precioMin });
+    this.productService.actualizarFiltros({ ...this.productService.getFiltrosActuales(), precioMin });
   }
 
   onPrecioMaxChange(event: any) {
     const precioMax = event.target.value;
-    const filtrosActuales = this.productService.getFiltrosActuales();
-    this.productService.actualizarFiltros({ ...filtrosActuales, precioMax });
+    this.productService.actualizarFiltros({ ...this.productService.getFiltrosActuales(), precioMax });
   }
 
   limpiarFiltros() {

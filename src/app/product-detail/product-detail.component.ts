@@ -33,12 +33,14 @@ export class ProductDetailComponent implements OnInit {
     this.route.paramMap.pipe(
       switchMap(params => {
         this.productId = params.get('id')!;
-        return this.productService.getProductById(this.productId);
+        const id = Number(this.productId); // Convertir a número
+        return this.productService.getProductById(id); // Pasar el ID convertido
       })
     ).subscribe(product => {
       this.product = product;
     });
   }
+  
   goBack(): void {
     this.location.back();
   }

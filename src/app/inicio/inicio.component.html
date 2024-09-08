@@ -1,15 +1,11 @@
 <div class="container-fluid mt-4 principal">
-    <div class="row">
-      <div class="col-md-3 filtros">
-        <div>
-          <app-filtros></app-filtros>
-        </div>
-      </div>
-
-
-      <div class="col-md-9">
-        <app-celulares class="row"></app-celulares>
-      </div>
+  <div class="row">
+    <div class="col-md-3 filtros">
+      <app-filtros (filtroCambio)="onFiltroCambio($event)"></app-filtros>
     </div>
+
+    <div class="col-md-9">
+      <app-celulares class="row"></app-celulares>
+    </div>
+  </div>
 </div>
-  

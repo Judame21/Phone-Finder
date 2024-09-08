@@ -10,5 +10,9 @@ import { CelularesComponent } from "../celulares/celulares.component";
   styleUrl: './inicio.component.scss'
 })
 export class InicioComponent {
+  filtros: any = {};
 
+  onFiltroCambio(filtros: any) {
+    this.filtros = filtros;
+  }
 }

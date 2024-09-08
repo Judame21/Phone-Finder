@@ -12,12 +12,12 @@
     <!-- Detalles del Producto -->
     <div class="product" *ngIf="product" class="row">
         <div class="col">
-            <img class="product-image" src="https://www.exito.com/_next/image?url=https%3A%2F%2Fexitocol.vtexassets.com%2Farquivos%2Fids%2F23241119%2FCelular-MOTOROLA-G72-SS-128-GB-6-GB-RAM-Blanco-3567243_a.jpg%3Fv%3D638544278010100000&w=256&q=75" alt="{{ product.title }}">
+            <img class="product-image" src="{{product.image_url}}" alt="{{ product.title }}">
         </div>
         <div class="col">
-            <h2><b>{{ product.title }}</b></h2>
+            <h2><b>{{ product.name }}</b></h2>
             <br/>
-            <p>{{ product.description }}</p>
+            <p>{{ product.text }}</p>
             <br/>
             <h4><b>Price:</b></h4> <p class="texto">${{ product.price }}</p>
             <br/>
