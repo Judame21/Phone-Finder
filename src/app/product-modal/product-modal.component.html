@@ -1,0 +1,25 @@
+<form (ngSubmit)="saveProduct()">
+    <label>
+      Nombre:
+      <input [(ngModel)]="product.name" name="name" required />
+    </label>
+    <label>
+      Precio:
+      <input type="number" [(ngModel)]="product.price" name="price" required />
+    </label>
+    <label>
+      Categoría:
+      <input [(ngModel)]="product.category" name="category" />
+    </label>
+    <label>
+      Imagen URL:
+      <input [(ngModel)]="product.image_url" name="image_url" />
+    </label>
+    <label>
+      Descripción:
+      <textarea [(ngModel)]="product.text" name="text"></textarea>
+    </label>
+    <button type="submit">Guardar</button>
+    <button type="button" (click)="closeModal()">Cancelar</button>
+  </form>
+  
