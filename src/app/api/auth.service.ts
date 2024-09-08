@@ -34,6 +34,18 @@ export class AuthService {
     return !!token;
   }
   
+  isAdmin(): boolean {
+    const token = this.getToken(); // Obtener el token JWT
+    if (token) {
+      const decodedToken: any = jwtDecode(token);
+      console.log('Decoded Token:', decodedToken)
+      return decodedToken.admin === true; // Comprobar si es admin
+    }
+    return false;
+  }
+
+
+
   public getUserName(): string | null {
     const token = this.getToken();
     if (token) {

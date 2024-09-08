@@ -61,9 +61,7 @@ import { Product } from "./product.model";
 })
 export class ProductService {
   // URL de la API de Node.js
-  private apiUrl = 'http://localhost:3000/api/products';
-
-  
+  private apiUrl = 'https://phone-finder-backend.onrender.com/api/products';
 
 
   constructor(private http: HttpClient) {
@@ -129,4 +127,10 @@ export class ProductService {
   getFiltrosActuales(): any {
     return this.filtrosSubject.getValue();
   }
+
+  getUniqueCategories(): Observable<string[]> {
+    return this.http.get<string[]>('https://phone-finder-backend.onrender.com/api/products/categories');
+  }
+ 
 }
+

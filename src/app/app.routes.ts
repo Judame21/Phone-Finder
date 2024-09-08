@@ -5,6 +5,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminGuard } from './guards/admin.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/inicio', pathMatch: 'full' },    
@@ -12,6 +13,6 @@ export const routes: Routes = [
     { path: 'producto/:id', component: ProductDetailComponent }, // Ruta para detalles del producto
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent},
-    { path: 'admin', component: AdminPanelComponent}
-
+    { path: 'admin', component: AdminPanelComponent, canActivate: [AdminGuard]}
+    
 ];

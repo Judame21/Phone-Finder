@@ -27,7 +27,7 @@
           <div ngbDropdown  *ngIf="authService.isAuthenticated()">
             <button ngbDropdownToggle class="btn btn-primary">{{ userName || 'User' }}</button>
             <div ngbDropdownMenu>
-              <a href="/admin"><button ngbDropdownItem href="/admin">Administrador</button></a>
+              <a href="/admin" *ngIf="authService.isAdmin()"><button ngbDropdownItem href="/admin">Administrador</button></a>
               <button ngbDropdownItem (click)="logout()">Cerrar Sesión</button>
             </div>
           </div>

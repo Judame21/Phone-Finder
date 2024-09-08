@@ -7,10 +7,7 @@
       <label for="categoria">Categoría</label>
       <select id="categoria" class="form-control" (change)="onCategoriaChange($event)">
         <option value="">Todas</option>
-        <option value="men's clothing">Ropa de Hombre</option>
-        <option value="women's clothing">Ropa de Mujer</option>
-        <option value="jewelery">Joyas</option>
-        <option value="electronics">Electrónica</option>
+        <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
       </select>
     </div>
   
