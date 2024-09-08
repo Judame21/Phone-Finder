@@ -1,0 +1,36 @@
+
+  .movie-card {
+    /* Estilos para las tarjetas de productos */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-group {
+    /* Estilos para el grupo de botones */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-sm {
+    /* Tamaño de los botones */
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .btn-primary {
+    /* Estilo para el botón "Editar" */
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-danger {
+    /* Estilo para el botón "Eliminar" */
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+.crear-producto{
+    text-align: center;
+}

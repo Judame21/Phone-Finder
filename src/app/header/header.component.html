@@ -24,13 +24,16 @@
           
           <!-- Mostrar el menú desplegable si está autenticado -->
           
-          <div ngbDropdown  *ngIf="authService.isAuthenticated()">
-            <button ngbDropdownToggle class="btn btn-primary">{{ userName || 'User' }}</button>
+          <div ngbDropdown *ngIf="authService.isAuthenticated()">
+            <button ngbDropdownToggle class="btn btn-primary">
+              {{ userName || 'User' }}
+            </button>
             <div ngbDropdownMenu>
-              <a href="/admin" *ngIf="authService.isAdmin()"><button ngbDropdownItem href="/admin">Administrador</button></a>
+              <a *ngIf="authService.isAdmin()" ngbDropdownItem href="/admin">Administrar</a>
               <button ngbDropdownItem (click)="logout()">Cerrar Sesión</button>
             </div>
           </div>
+          
           
           
           

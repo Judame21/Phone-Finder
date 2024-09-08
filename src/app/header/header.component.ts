@@ -2,12 +2,13 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AuthService } from '../api/auth.service'; 
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-
+import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgbDropdown, NgbDropdownModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'] // Cambiado a 'styleUrls'
 })

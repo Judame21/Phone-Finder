@@ -1,20 +1,27 @@
-<div class="contenedor-admin">
-    <button (click)="openCreateProductModal()">Crear Producto</button>
+
+  
+  <div class="contenedor-admin">
+    <div class="d-flex justify-content-center mt-3 mb-3">
+        <button class="btn btn-primary crear-producto"  (click)="openCreateProductModal()">Crear Producto</button>
+    </div>
     <div class="row">
         <div class="col-md-3 pb-2" *ngFor="let product of products">
-            <div class="movie-card">
-                <img class="card-img mt-3" [src]="product.image_url" alt="Card image">
-                <div class="card-text">
+            <div class="card movie-card">
+                <img class="card-img-top" [src]="product.image_url" alt="Card image">
+                <div class="card-body">
                     <h5 class="card-title">{{ product.name | truncate:25 }}</h5>
                     <p class="card-text mb-3 price"> $ {{ product.price }}</p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-sm" (click)="openEditProductModal(product)">Editar</button>
+                        <button class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">Eliminar</button>
+                    </div>
                 </div>
             </div>
-        <button (click)="openEditProductModal(product)">Editar</button>
-        <button (click)="deleteProduct(product.id)">Eliminar</button>
-      </div>
+        </div>
     </div>
-  </div>
-  
+</div>
+
+
 
   <div class="row">
     

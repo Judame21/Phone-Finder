@@ -1,12 +1,13 @@
-<div class="container">
-    <h2>Register</h2>
+<div class="container d-flex justify-content-center mt-4 mb-4">
+  <div class="card tarjeta">
+    <h2>Registrarse</h2>
     <form (ngSubmit)="register()">
       <div class="form-group">
-        <label for="username">Username:</label>
+        <label for="username">Usuario:</label>
         <input type="text" id="username" [(ngModel)]="username" name="username" required class="form-control">
       </div>
       <div class="form-group">
-        <label for="password">Password:</label>
+        <label for="password">Contraseña:</label>
         <input type="password" id="password" [(ngModel)]="password" name="password" required class="form-control">
       </div>
       <div class="form-group">
@@ -14,7 +15,7 @@
         <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" class="form-control">
       </div>
       
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="submit" class="btn btn-primary">Registrarse</button>
     </form>
 
 
@@ -27,5 +28,6 @@
       {{ errorMessage }}
     </div>
   </div>
+  </div>  
 
   

@@ -1,4 +1,4 @@
-<form (ngSubmit)="saveProduct()">
+<!-- <form (ngSubmit)="saveProduct()">
     <label>
       Nombre:
       <input [(ngModel)]="product.name" name="name" required />
@@ -22,4 +22,34 @@
     <button type="submit">Guardar</button>
     <button type="button" (click)="closeModal()">Cancelar</button>
   </form>
+   -->
+   <form (ngSubmit)="saveProduct()" class="product-form product-modal">
+    <div class="form-group">
+      <label for="name">Nombre:</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name"   
+   required />
+    </div>
+    <div class="form-group">
+      <label   
+   for="price">Precio:</label>
+      <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price" required />
+    </div>
+    <div class="form-group">
+      <label for="category">Categoría:</label>   
   
+      <input type="text" class="form-control" id="category" [(ngModel)]="product.category" name="category" />
+    </div>
+    <div class="form-group">
+      <label   
+   for="image_url">Imagen URL:</label>
+      <input type="text" class="form-control" id="image_url" [(ngModel)]="product.image_url" name="image_url" />
+    </div>
+    <div class="form-group">
+      <label for="text">Descripción:</label>
+      <textarea class="form-control" id="text" [(ngModel)]="product.text" name="text"></textarea>
+    </div>
+    <div class="form-buttons mt-4 mb-2 d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary  me-2">Guardar</button>
+      <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancelar</button>
+    </div>
+  </form>
